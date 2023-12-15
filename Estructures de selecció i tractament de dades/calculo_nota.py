@@ -41,7 +41,7 @@ print(alumnos_op_2,"hola")
 for alumno in range(0,len(alumnos_info)):
     for nota in range(3,len(alumnos_info)):
         print(alumnos_info[alumno][nota])
-        if alumnos_info[alumno[nota]] > 8:
+        if alumnos_info[alumno][nota] > 8:
             print("f")
             alumnos_op_3.append(alumnos_info[0])
 
