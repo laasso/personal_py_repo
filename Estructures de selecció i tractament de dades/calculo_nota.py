@@ -16,7 +16,7 @@ alumnos_op_3 = []
 
 nota1 = 0
 #la lista alumnos_info es provisonal es para no tener que poner todo el rato los datos XD
-alumnos_info = [["nicolas","rubiales", 18, 10, 10, 10],["iker", "macias", 19, 10, 10, 10],["carlos", "bonilla", 18, 10, 10, 9],["izan", "lozano",18, 8, 7, 5]]
+alumnos_info = [["nicolas","rubiales", 18, 1, 8, 7],["iker", "macias", 19, 10, 10, 10],["carlos", "bonilla", 18, 10, 10, 9],["izan", "lozano",18, 8, 8, 5]]
 '''
 print(alumnos_info)
 opcion_usuario = int(input('Introduce que deseas hacer '))
@@ -37,12 +37,10 @@ for alumno in range(0,len(alumnos_info)):
 print(alumnos_op_2,"hola")
 '''
 
-
 for alumno in range(0,len(alumnos_info)):
     for nota in range(3,len(alumnos_info)):
-        print(alumnos_info[alumno][nota])
         if alumnos_info[alumno][nota] > 8:
-            print("f")
-            alumnos_op_3.append(alumnos_info[0])
+            alumnos_op_3.append(alumnos_info[alumno][0])
 
-print(alumnos_op_3,"hola")
+print(alumnos_op_3,)
+
