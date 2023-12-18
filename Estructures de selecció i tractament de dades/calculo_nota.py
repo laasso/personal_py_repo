@@ -6,6 +6,8 @@
 suma_media_op2 = []
 
 checker = False
+checker2 = False
+
 
 pornota1 = int(30)
 pornota2 = int(40)
@@ -16,7 +18,7 @@ media_min_op2 = int(7)
 alumnos_op_2 = []
 alumnos_op_3 = []
 
-nota1 = 0
+
 #la lista alumnos_info es provisonal es para no tener que poner todo el rato los datos XD
 alumnos_info = [["nicolas","rubiales", 18, 1, 9, 7],["iker", "macias", 19, 7, 10, 10],["carlos", "bonilla", 18, 10, 10, 9],["izan", "lozano",18, 8, 8, 5]]
 '''
@@ -36,8 +38,7 @@ for alumno in range(0,len(alumnos_info)):
             checker = True
         suma_media_op2 = []
     checker = False
-    
-checker = False
+
 alumnos_op_2 = tuple(alumnos_op_2)
 print(alumnos_op_2,"hola")
 
@@ -46,10 +47,10 @@ print(alumnos_op_2,"hola")
 
 for alumno in range(0,len(alumnos_info)):
     for nota in range(3,len(alumnos_info[alumno])):
-        if alumnos_info[alumno][nota] > 8 & checker == False:
+        if alumnos_info[alumno][nota] > 8 & checker2 == False:
             alumnos_op_3.append(alumnos_info[alumno][0])
-            checker = True
-    checker = False
+            checker2 = True
+    checker2 = False
 alumnos_op_3 = tuple(alumnos_op_3)
 print(alumnos_op_3)
 
