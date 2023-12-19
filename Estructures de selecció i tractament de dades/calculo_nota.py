@@ -1,13 +1,10 @@
-'''
- (Nom, Cognom, Edat, Nota1, Nota2, Nota3).
-'''
+
 #//PRE Usuario introduce datos
 
 suma_media_op2 = []
 
 checker = False
 checker2 = False
-
 
 pornota1 = int(30)
 pornota2 = int(40)
@@ -18,15 +15,19 @@ media_min_op2 = int(7)
 alumnos_op_2 = []
 alumnos_op_3 = []
 
+numero_notes = 3
+numero_alumnes = int(input("Quants alumnes evaluarem:"))
 
-#la lista alumnos_info es provisonal es para no tener que poner todo el rato los datos XD
-alumnos_info = [["nicolas","rubiales", 18, 1, 5, 7],["iker", "macias", 19, 7, 10, 10],["carlos", "bonilla", 18, 10, 10, 9],["izan", "lozano",18, 8, 8, 5]]
+alumnos_info = [None] * numero_alumnes
 
-'''
-print(alumnos_info)
-opcion_usuario = int(input('Introduce que deseas hacer '))
-
-'''
+for i in range(numero_alumnes):
+    name = input("Nom de l'alumne: ")
+    surname = input("Cognom de l'alumne: ")
+    age = int(input("Edat de l'alumne: "))
+    notes = [None] * numero_notes
+    for j in range(numero_notes):
+        notes[j] = int(input(f"Nota {j} de l'alumne: "))
+    alumnos_info[i] = (name, surname, age, notes[0], notes[1], notes[2])
 
 for alumno in range(0,len(alumnos_info)):
     for info in range(3,len(alumnos_info[alumno])):
@@ -35,13 +36,12 @@ for alumno in range(0,len(alumnos_info)):
         suma_media_op2.append(alumnos_info[alumno][info] * pornota3 / 100)
         suma_total_media_op2 = sum(suma_media_op2)
         if suma_total_media_op2 > media_min_op2 & checker == False:
-            alumnos_op_2.append(alumnos_info[alumno][0])
+            alumnos_op_2.append(alumnos_info[alumno])
             checker = True
         suma_media_op2 = []
     checker = False
 
 alumnos_op_2 = tuple(alumnos_op_2)
-print(alumnos_op_2,"hola")
 
 
 
@@ -51,8 +51,38 @@ for alumno in range(0,len(alumnos_info)):
         if alumnos_info[alumno][nota] > 8 & checker2 == False:
             checker2 = True
     if checker2 == True:
-        alumnos_op_3.append(alumnos_info[alumno][0])
+        alumnos_op_3.append(alumnos_info[alumno])
     checker2 = False
 alumnos_op_3 = tuple(alumnos_op_3)
-print(alumnos_op_3)
 
+
+
+print("Mitjana Superior a 7")
+for alumne in alumnos_op_2:
+    print("\tNom:", end=" ")
+    print(alumne[0], end=" ")
+    print("Cognom:", end=" ")
+    print(alumne[1], end=" ")
+    print("Edat:", end=" ")
+    print(alumne[2], end=" ")
+    print("Nota 1:", end=" ")
+    print(alumne[3], end=" ")
+    print("Nota 2:", end=" ")
+    print(alumne[4], end=" ")
+    print("Nota 3:", end=" ")
+    print(alumne[5])
+
+print("Alguna nota superior a 8")
+for alumne in alumnos_op_3:
+    print("\tNom:", end=" ")
+    print(alumne[0], end=" ")
+    print("Cognom:", end=" ")
+    print(alumne[1], end=" ")
+    print("Edat:", end=" ")
+    print(alumne[2], end=" ")
+    print("Nota 1:", end=" ")
+    print(alumne[3], end=" ")
+    print("Nota 2:", end=" ")
+    print(alumne[4], end=" ")
+    print("Nota 3:", end=" ")
+    print(alumne[5]) 
