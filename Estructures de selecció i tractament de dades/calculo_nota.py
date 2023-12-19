@@ -1,5 +1,5 @@
 
-#//PRE Usuario introduce datos
+#//PRE Usuario introduce datos que corresponden con el tipo de datos que se piden
 
 suma_media_op2 = []
 
@@ -86,3 +86,5 @@ for alumne in alumnos_op_3:
     print(alumne[4], end=" ")
     print("Nota 3:", end=" ")
     print(alumne[5]) 
+
+#//POST Se muestran los nombres ordenados
