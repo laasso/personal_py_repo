@@ -1,3 +1,0 @@
-
-
-print(llista_preguntes)
