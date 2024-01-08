@@ -15,19 +15,18 @@ seed = 2
 print("""
 Benvingut al joc de preguntes i respostes
 Cada resposta correcta et suma un punt
-      """)
+    """)
 
 while opcio != 0:
     opcio = int(input("""
 Selecciona una opcio:
     0. Sortir
     1. Respondre
-      """))
+    """))
     if opcio == 1:
         seed = (seed * 997) % 1000
-        random = (seed * 503) % 1000 / 100
+        random = (seed * 503) % 1000 / 1000
         numero_pregunta = int(random * (len(llista_preguntes)))
-        numero_pregunta = min(numero_pregunta, len(llista_preguntes) - 1)
         print(numero_pregunta)
         print(seed)
         resposta = str(input((llista_preguntes[numero_pregunta][0])))
@@ -39,4 +38,6 @@ Selecciona una opcio:
             print("Resposta incorrecta")
             print("La teva puntuacio:",score)
 print("La teva puntuacio final es:",score)
+
+
 
