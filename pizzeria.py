@@ -11,18 +11,24 @@ stock = [{"Name":"Tomato", "Quantity":2},{"Name":"Cheese", "Quantity":3},{"Name"
 pizza_options = [{"Name":"Margarita", "Ingredients":["tomato", "cheese"],"Price":10},
                  {"Name":"Pepperoni", "Ingredients":["tomato", "cheese", "pepperoni"],"Price":12},]
 
-def order_request(order):
+def order_request(order,pizza_options):
     request = input("Order")
-    for request in pizza_options['Name']:
-        pizza_prepare.append(request)
-        
+    for request in pizza_options[0]["Name"]:
+        order.append(request)
+
 def pizza_preparation(order, pizza_prepare):
-    if order > 0 :
+    if len(order) > 0 :
         for pizza in order:
             pizza_prepare.append(pizza)
 
 def stock_manage(stock):
     for ingredients in stock:
         print(ingredients)
-    
+
+order_request(order,pizza_options)
+
+pizza_preparation(order,pizza_prepare)
+
+print(order)
+print (pizza_prepare)
 
