@@ -16,10 +16,15 @@ def order_request(order,pizza_options, count_pizza):
     aproved = False
     request = input("Order")
     while aproved == False :
-        if request in pizza_options[count_pizza]["Name"]:
-            order.append(request)
+        if count_pizza < len(pizza_options):
+            if request in pizza_options[count_pizza]["Name"]:
+                order.append(pizza_options[count_pizza])
+                aproved = True
+            count_pizza = count_pizza + 1
+        else:
+            print("we doint have rthe piza you rquest")
             aproved = True
-        count_pizza = count_pizza + 1
+
 
 def pizza_preparation(order, pizza_prepare):
     if len(order) > 0 :
