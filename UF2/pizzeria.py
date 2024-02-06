@@ -40,7 +40,7 @@ def pizza_preparation(order, pizza_prepare,stock):
         for ingredients in pizza["Ingredients"]:
             print("")
             #here we substract the ingredient  used to make the pizza to the stock
-
+            
 def stock_manage(stock):
     for ingredients in stock:
         print("")
