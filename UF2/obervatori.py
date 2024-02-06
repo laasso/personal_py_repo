@@ -9,8 +9,7 @@ def RT(tlist):
     aux_list = []
     aux_list.append(temps)
     print(aux_list)
-
-
+#hacer strip para separar en diferentes posicions los datos y usar un float() para convertirlos
 while exe_option == True:
     exe_option_input = (input('''Benvingut al registre de temperatures
 -------------------------------------
