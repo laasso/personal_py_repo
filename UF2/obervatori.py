@@ -10,8 +10,11 @@ def RT(tlist,counter):
     counter = counter + 7
     print(aux_list)
     aux_list = aux_list.split(' ')
+    float_list = []
+    for num in aux_list:
+        float_list.append(float(num))
 
-    print(aux_list)
+    print(float_list)
 
 
 #hacer split para separar en diferentes posicions los datos y usar un float() para convertirlos
