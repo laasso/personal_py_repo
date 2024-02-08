@@ -1,15 +1,24 @@
-temp = [[2,[1,2,3,4,5,6,7]],[3,[7,6,5,4,3,2,1,]]]
-
+temp = []
+day_counter = 0
 
 exe_option = True
 exe_option_input = ''
 
-def RT(tlist):
-    temps = input()
+def RT(tlist,counter):
     aux_list = []
-    aux_list.append(temps)
+    aux_list = input()
+    counter = counter + 7
     print(aux_list)
-#hacer strip para separar en diferentes posicions los datos y usar un float() para convertirlos
+    aux_list = aux_list.split(' ')
+
+    print(aux_list)
+
+
+#hacer split para separar en diferentes posicions los datos y usar un float() para convertirlos
+    
+def dias(contador): 
+    print(contador)
+
 while exe_option == True:
     exe_option_input = (input('''Benvingut al registre de temperatures
 -------------------------------------
@@ -21,4 +30,4 @@ while exe_option == True:
     if exe_option_input == 'FI':
         exe_option = False
     elif exe_option_input == 'RT':
-        RT(temp)
+        RT(temp,day_counter)
