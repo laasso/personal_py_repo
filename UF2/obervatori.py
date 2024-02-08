@@ -1,5 +1,5 @@
 temp = []
-day_counter = int(0)
+day_counter = int(1)
 week_counter = 0
 exe_option = True
 exe_option_input = ''
@@ -14,12 +14,9 @@ months_days = {
     'julio': 212,    
     'agosto': 243,   
     'septiembre': 273, 
+    'noviembre': 334,
     'diciembre': 365  
 }
-
-
-
-
 
 def RT(tlist,counter,wk_counter):
     wk_counter = wk_counter + 1
@@ -30,14 +27,14 @@ def RT(tlist,counter,wk_counter):
     float_list = []
     for num in aux_list:
         float_list.append(float(num))
-    print(tlist)
     tlist.append([wk_counter, float_list])  
-    print(wk_counter)
-    print(tlist)
 
-    
+   
 def DAYS(counter,months): 
-    for num in 
+    for month in months:
+        if counter < months[month]:
+            print(f"Es dia {counter} de {month}")
+
 while exe_option == True:
     exe_option_input = (input('''Benvingut al registre de temperatures
 -------------------------------------
