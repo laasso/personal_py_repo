@@ -7,13 +7,13 @@ exit = False
 
 def inici():
     while not exit:
+        printReadSentence()
         readSentence(sentence)
 
 def printReadSentence():
     print("Escriu una frase:")
-
 def readSentence(sentence):
-    sentence = str(input(printReadSentence))
+    sentence = str(input)
     return sentence
 
 def printMostLetterSentence(mostLetter, mostLetter_counter):
