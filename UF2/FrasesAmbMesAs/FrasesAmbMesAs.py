@@ -9,16 +9,17 @@ def inici():
     while not exit:
         printReadSentence()
         readSentence(sentence)
-
+        printMostLetterSentence(mostLetter, mostLetter_counter)
 def printReadSentence():
-    print("Escriu una frase:")
+    readSentence(sentence)
+
 def readSentence(sentence):
-    sentence = str(input)
+    sentence = str(input("Escriu una frase:"))
     return sentence
 
 def printMostLetterSentence(mostLetter, mostLetter_counter):
     print(f"La frase amb mes 'a' es: {mostLetter}")
-    mostLetter_counter = count_letter(mostLetter)
+    mostLetter_counter = count_letter(mostLetter,selected_letter,letter_counter)
     print(f"Te {mostLetter_counter}{selected_letter}")
 
 def mostLetterSentence(sentence,mostLetter, count_letter):
