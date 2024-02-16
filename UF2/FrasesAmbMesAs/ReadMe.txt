@@ -1,8 +1,11 @@
-Feu un programa anomenat FraseAmbMesAs que vagi llegint frases pel teclat i, en acabar cada entrada d’una frase, mostri quina és la frase que s’ha escrit fins al moment amb més lletres ‘a’ (minúscula o majúscula) i quantes en tenia. 
+deteclat i, en acabar cada entrada d’una frase, mostri quina és la frase 
+que s’ha escrit fins al moment amb més lletres ‘a’ (minúscula o majúscula) 
+i quantes en tenia. 
 
 El programa ha d’anar-se executant fins a llegir la frase “fi”. 
 
-A mode de guia de sortida hauria de ser semblant a la que es mostra tot seguit.
+A mode de guia de sortida hauria de ser semblant a la que es
+ mostra tot seguit.
 
 '''
 Escriu una frase:> Hola que tal
