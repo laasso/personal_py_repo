@@ -1,2 +1,2 @@
 # personal_py_repo
-personal repo for python tests
+personal repo for python practice
