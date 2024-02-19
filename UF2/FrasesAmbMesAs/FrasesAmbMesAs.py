@@ -17,7 +17,8 @@ def printReadSentence():
 
 def readSentence():
     global sentence
-    sentence = str(input("Escriu una frase: "))
+    sentence = str(input('''Escriu una frase: 
+>'''))
     return sentence
 
 def printMostLetterSentence():
