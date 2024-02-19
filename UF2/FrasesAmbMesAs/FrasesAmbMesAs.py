@@ -8,36 +8,41 @@ exit = False
 def inici():
     while not exit:
         printReadSentence()
-        readSentence(sentence)
-        printMostLetterSentence(mostLetter, mostLetter_counter)
-def printReadSentence():
-    readSentence(sentence)
+        printMostLetterSentence()
 
-def readSentence(sentence):
-    sentence = str(input("Escriu una frase:"))
+def printReadSentence():
+    global sentence, exit
+    sentence = readSentence()
+    exit = exitProgramm(sentence)
+
+def readSentence():
+    global sentence
+    sentence = str(input("Escriu una frase: "))
     return sentence
 
-def printMostLetterSentence(mostLetter, mostLetter_counter):
-    print(f"La frase amb mes 'a' es: {mostLetter}")
-    mostLetter_counter = count_letter(mostLetter,selected_letter,letter_counter)
-    print(f"Te {mostLetter_counter}{selected_letter}")
+def printMostLetterSentence():
+    global mostLetter, mostLetter_counter,selected_letter
+    mostLetter = mostLetterSentence()
+    print(f"La frase amb mes {selected_letter} es: {mostLetter}")
+    mostLetter_counter = count_letter(mostLetter)
+    print(f"Te {mostLetter_counter} {selected_letter}")
 
-def mostLetterSentence(sentence,mostLetter, count_letter):
-    mostLetter_count = count_letter(mostLetter,selected_letter,letter_counter)
-    letter_counter = count_letter(sentence,selected_letter,letter_counter)
-    if mostLetter_count < letter_counter:
+def mostLetterSentence():
+    global mostLetter
+    if count_letter(sentence) >= count_letter(mostLetter):
         mostLetter = sentence
-    letter_counter = 0 
-    return mostLetter, letter_counter
-
-def count_letter(sentence,selected_letter,letter_counter):
+    return mostLetter
+    
+def count_letter(sentence):
+    global letter_counter
+    letter_counter = 0
     sentence = convertStrToArray(sentence)
     if len(sentence) > 0:
         for letter in sentence:
             if letter == selected_letter:
                 letter_counter = letter_counter + 1
     return letter_counter
-
+        
 def convertStrToArray(sentence):
     sentence = ignoreMayusMinus(sentence)
     sentence = list(sentence)
@@ -47,7 +52,8 @@ def ignoreMayusMinus(sentence):
     sentence = sentence.casefold()
     return sentence
 
-def exitProgramm(sentence,exit):
+def exitProgramm(sentence):
+    global exit
     if sentence == 'fi':
         exit = True
     return exit
