@@ -5,7 +5,6 @@ llista_tirades:list[int] = [0] * (CARES_DAU * 2 - 1)
 numero_tirades = CARES_DAU * CARES_DAU
 
 
-
 def generar_histograma() -> None:
     generar_tirades()
     mostrar_probabilitat()
@@ -42,15 +41,19 @@ def llegir_valor() -> int:
             print("El valor no es entre 2 i 12")
     return valor_introduit
 
-def calcular_probabilitat():
+def calcular_probabilitat() -> float:
     probabilitat:float = 0.0
     valor:int = llegir_valor()
+    suma:int = 0
     for i in range(len(llista_tirades)):
         if i == valor:
-            probabilitat = ((llista_tirades[i - 1] * 100)/numero_tirades)
+            for j in range(0,valor - 1):
+                suma = llista_tirades[j] + suma
+            probabilitat = ((suma * 100)/numero_tirades)
+    probabilitat = int(probabilitat)
+    probabilitat = float(probabilitat)
     return probabilitat
             
 
 
 generar_histograma()
-print(llista_tirades)
