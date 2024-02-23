@@ -15,7 +15,7 @@ def generar_tirades() -> None:
         while dau2 <= CARES_DAU:
             llista_tirades[dau1 + dau2 - 2] += 1
             dau2 = dau2 + 1
-    dau1 = dau1 + 1
+        dau1 = dau1 + 1
 
 def mostrar_histograma() -> None:
     for i in range(len(llista_tirades)):
@@ -28,6 +28,7 @@ def calcular_valor_tirada(i:int) -> str:
         valor_tirada = f" {valor}"
     else:
         valor_tirada = f"{valor}"
+        
     return valor_tirada
 
 def mostrar_maximo() -> None:
