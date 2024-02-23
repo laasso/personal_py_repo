@@ -30,7 +30,19 @@ def calcular_valor_tirada(i:int) -> str:
         valor_tirada = f"{valor}"
     return valor_tirada
 
-def mostrar_maximo():
-    ...
+def mostrar_maximo() -> None:
+    valor_tirada = calcular_valor_tirada_mes_repeticions()
+    print(f"El maxim es {valor_tirada}.")    
+
+def calcular_valor_tirada_mes_repeticions() -> int:
+    maxim:int = 0
+    maxim_tirades_index:int = 0 
+
+    for valor in range (len(llista_tirades)):
+        if llista_tirades[valor] > maxim:
+            maxim = llista_tirades[valor]
+            maxim_tirades_index = valor
+    
+    return maxim_tirades_index + 2
 
 generar_histograma()
