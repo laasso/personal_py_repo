@@ -7,15 +7,30 @@ def generar_histograma() -> None:
     mostrar_histograma()
     mostrar_maximo()
 
-def generar_tirades():
-    ...
+def generar_tirades() -> None:
+    dau1:int = 1
+    
+    while dau1 <= CARES_DAU:
+        dau2:int = 1
+        while dau2 <= CARES_DAU:
+            llista_tirades[dau1 + dau2 - 2] += 1
+            dau2 = dau2 + 1
+    dau1 = dau1 + 1
 
-def generar_tirades():
-    ...
+def mostrar_histograma() -> None:
+    for i in range(len(llista_tirades)):
+        valor_tirada = calcular_valor_tirada(i)
+        print(f"{valor_tirada}:", "*" * llista_tirades[i])    
 
-def mostrar_histograma():
-    ...
-def mosntrar_maximo():
+def calcular_valor_tirada(i:int) -> str:
+    valor = i + 2 
+    if valor < 10:
+        valor_tirada = f" {valor}"
+    else:
+        valor_tirada = f"{valor}"
+    return valor_tirada
+
+def mostrar_maximo():
     ...
 
 generar_histograma()
