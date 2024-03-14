@@ -15,3 +15,17 @@ class Temperatura:
         self.valor = (self.valor - 32) * 5/9
         self.unidad = 'Celsisu'
 
+
+ayer = Temperatura()
+ayer.valor = 14
+
+hoy = Temperatura()
+hoy.valor = 8
+ayer.escribir()
+
+hoy.pasar_a_far()
+ayer.escribir()
+hoy.escribir()
+
+hoy.escribir()
+
