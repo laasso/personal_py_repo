@@ -1,10 +1,7 @@
 from libro import Libro
-from socio import Socio
-
 class Prestamo:
-    def __init__(self, libro: Libro, socio: Socio):
+    def __init__(self, libro: Libro):
         self.libro = libro
-        self.socio = socio
 
     def registrar_prestamo(self, fecha: str):
         print(f"Prestamo registrado: Libro {self.libro.titulo}, Socio {self.socio.nombre}, Fecha: {self.fecha}")

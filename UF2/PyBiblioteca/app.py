@@ -16,8 +16,9 @@ class App:
         socio2.informacion()
         socio1.solicitar_prestamo(libro1, "2024-03-15")
         libro1.informacion()
-        socio2.devolver_prestamo(libro1)
+        socio2.devolver_prestamo()
         libro1.informacion()
 
 app = App()
 app.exec()
+1
