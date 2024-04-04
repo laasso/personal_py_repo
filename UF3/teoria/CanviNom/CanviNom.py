@@ -6,7 +6,11 @@ ArxiuSEnseEtensio = os.path.splitext(ruta_fitxer)
 
 os.rename(ruta_fitxer,ArxiuSEnseEtensio[0])
 
-directori = os.listdir("/home/lasso/github/personal_py_repo/UF3/teoria/CanviNom")
+directori_actual = os.getcwd()
+
+print(directori_actual)
+
+directori = os.listdir(directori_actual)
 print(directori)
 
 
