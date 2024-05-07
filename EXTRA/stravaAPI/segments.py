@@ -15,7 +15,7 @@ configuration.access_token = os.getenv("ACCESS_TOKEN")
 
 # Crear una instancia de la clase API
 api_instance = strava_api_v3.SegmentsApi(strava_api_v3.ApiClient(configuration))
-id = 789 # int | The identifier of the segment leaderboard.
+id = 28689032 # int | The identifier of the segment leaderboard.
 gender = 'gender_example' # str | Filter by gender. (optional)
 age_group = 'age_group_example' # str | Premium Feature. Filter by age group. (optional)
 weight_class = 'weight_class_example' # str | Premium Feature. Filter by weight class. (optional)
