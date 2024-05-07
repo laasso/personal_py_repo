@@ -6,11 +6,14 @@ from pprint import pprint
 import os
 from dotenv import load_dotenv
 
-# Configure OAuth2 access token for authorization: strava_oauth
+# Cargar variables de entorno desde el archivo .env
+load_dotenv()
+
+# Configurar OAuth2 access token for authorization: strava_oauth
 configuration = strava_api_v3.Configuration()
 configuration.access_token = os.getenv("ACCESS_TOKEN")
 
-# create an instance of the API class
+# Crear una instancia de la clase API
 api_instance = strava_api_v3.SegmentsApi(strava_api_v3.ApiClient(configuration))
 id = 789 # int | The identifier of the segment leaderboard.
 gender = 'gender_example' # str | Filter by gender. (optional)
@@ -24,7 +27,7 @@ page = 56 # int | Page number. (optional)
 per_page = 30 # int | Number of items per page. Defaults to 30. (optional) (default to 30)
 
 try:
-    # Get Segment Leaderboard
+    # Obtener la tabla de clasificación del segmento
     api_response = api_instance.get_leaderboard_by_segment_id(id, gender=gender, age_group=age_group, weight_class=weight_class, following=following, club_id=club_id, date_range=date_range, context_entries=context_entries, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
