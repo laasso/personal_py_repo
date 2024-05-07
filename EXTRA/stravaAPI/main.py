@@ -7,7 +7,7 @@ from src.api_methods import authorize
 from src.data_preprocessing import main as data_prep
 
 # used to f.e set the limit of fetched activities (default - 30)
-ACTIVITIES_PER_PAGE = 200
+ACTIVITIES_PER_PAGE =  200
 # current page number with activities
 PAGE_NUMBER = 1
 
