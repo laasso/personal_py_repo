@@ -1,22 +1,20 @@
 from twilio.rest import Client
-from config import TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_PHONE_NUMBER
+from config import TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_WHATSAPP_NUMBER
+import time
 
-# Create a Twilio client
 client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
-def send_sms(to_number, message):
+def send_whatsapp_message(to_number, message):
     try:
-        # Use the Twilio client to send an SMS message
         message = client.messages.create(
+            from_=TWILIO_WHATSAPP_NUMBER,
             body=message,
-            from_=TWILIO_PHONE_NUMBER,
             to=to_number
         )
-        print(f"Message sent successfully to {to_number} with SID: {message.sid}")
+        print(f"Mensaje de WhatsApp enviado correctamente a {to_number}. SID: {message.sid}")
     except Exception as e:
-        print(f"Failed to send message: {e}")
+        print(f"No se pudo enviar el mensaje de WhatsApp: {e}")
 
-# Example usage:
-# Replace 'desired_number' with the desired recipient's phone number
-# Replace 'desired_message' with the desired message
-send_sms('desired_number', 'desired_message')
+while 0 < 1:
+    time.sleep(1)
+    send_whatsapp_message('whatsapp:+34692682368', 'Rayos y centellas!')
