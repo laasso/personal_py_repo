@@ -13,12 +13,13 @@ load_dotenv()
 configuration = strava_api_v3.Configuration()
 configuration.access_token = os.getenv("ACCESS_TOKEN")
 
-# create an instance of the API class
-api_instance = strava_api_v3.AthletesApi(strava_api_v3.ApiClient(configuration))
+
+api_instance = strava_api_v3.GearsApi(strava_api_v3.ApiClient(configuration))
+id = 41979529 # int | The identifier of the gear.
 
 try:
-    # Get Authenticated Athlete
-    api_response = api_instance.get_logged_in_athlete()
+    # Get Equipment
+    api_response = api_instance.get_gear_by_id(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AthletesApi->get_logged_in_athlete: %s\n" % e)
+    print("Exception when calling GearsApi->get_gear_by_id: %s\n" % e)
