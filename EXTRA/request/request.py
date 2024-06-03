@@ -1,9 +1,7 @@
-import requests
-import json
+from url import Request
+
 URL = 'https://www.lasso.cat/restaurant-diccio.html'
 
-text = requests.get(URL)
-text  = text.text
+get = Request.url(URL)
 
-
-print(text)
+print(get)
